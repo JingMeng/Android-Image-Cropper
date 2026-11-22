@@ -1,11 +1,16 @@
 apply plugin: 'com.android.application'
 
 android {
+    namespace 'com.example.croppersample'
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
     compileSdkVersion rootProject.compileSdkVersion
     buildToolsVersion rootProject.buildToolsVersion
 
     defaultConfig {
-        minSdkVersion 14
+        minSdk 14
         targetSdkVersion rootProject.compileSdkVersion
         versionCode 1
         versionName '1.0'
@@ -19,3 +24,4 @@ dependencies {
     api project(':cropper')
     api "androidx.appcompat:appcompat:$androidXLibraryVersion"
 }
+
